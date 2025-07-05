@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lokeshwaran | Data Scientist & AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f001e, #1a0033);
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #17002c;
+      box-shadow: 0 2px 8px rgba(255, 0, 255, 0.1);
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #bb00ff; }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 80px 20px;
+    }
+    .hero-text { max-width: 550px; }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+    .hero h2 { font-size: 2rem; color: #bb00ff; margin-bottom: 15px; }
+    .hero p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
+    .hero .buttons a {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px 10px 0 0;
+      background: #bb00ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .hero .buttons a:hover { background: #d500ff; }
+    .hero img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #bb00ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .loop-scroll {
+      overflow: hidden;
+      position: relative;
+    }
+    .loop-track {
+      display: flex;
+      width: calc(200%);
+      animation: loop 20s linear infinite;
+    }
+    @keyframes loop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .skills span, .card {
+      flex: 0 0 auto;
+      background: #25014d;
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin: 10px;
+      display: inline-block;
+      min-width: 160px;
+      text-align: center;
+    }
+    .skills span:hover, .card:hover {
+      background: #3e1a6d;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    .card h3 { margin-bottom: 5px; }
+    .card img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: nowrap;
+      width: max-content;
+    }
+    .last-big-card {
+      min-width: 350px !important;
+      background: #380065;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      background: #1a0033;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(187, 0, 255, 0.2);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      background: #180033;
+      color: white;
+    }
+    form input:focus, form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #bb00ff99;
+    }
+    form button {
+      background: #bb00ff;
+      padding: 12px 24px;
+      border: none;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover { background: #d500ff; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #14002b;
+    }
+
+    .socialm-icons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .socialm-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #bb00ff15;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+    .socialm-icons img {
+      width: 22px;
+      height: 22px;
+      filter: invert(73%) sepia(100%) saturate(7475%) hue-rotate(272deg) brightness(100%) contrast(100%);
+    }
+    .socialm-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 12px #bb00ff88;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lokeshwaran</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm Lokeshwaran</h1>
+    <h2>Data Scientist & AI/ML Engineer</h2>
+    <p>I build intelligent systems to solve real-world problems using machine learning, deep learning, and data insights.</p>
+    <div class="buttons">
+      <a href="#projects">My Projects</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Io-zUXs8D6tAFIiJXkN31X4KUVH-bY6y" target="_blank" download>Download Resume</a>
+    </div>
+  </div>
+  <img src="https://i.postimg.cc/8kJVW51H/me-pro.png" alt="Lokeshwaran">
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p id="about-text" style="text-align: center; min-height: 100px;"></p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="loop-scroll">
+    <div class="loop-track skills">
+      <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>Power BI</span><span>Matplotlib</span><span>Seaborn</span><span>Flask</span><span>FastAPI</span><span>SQL</span><span>Git</span>
+      <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>Power BI</span><span>Matplotlib</span><span>Seaborn</span><span>Flask</span><span>FastAPI</span><span>SQL</span><span>Git</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="loop-scroll">
+    <div class="loop-track cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Machine Learning" />
+        <h3>Machine Learning</h3>
+        <p>Custom ML models for predictions, classification & optimization.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Deep Learning" />
+        <h3>Deep Learning</h3>
+        <p>Neural networks for vision, NLP, and time series tasks.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4260/4260307.png" alt="Data Viz" />
+        <h3>Data Visualization</h3>
+        <p>Dashboards using Power BI, Seaborn, and Matplotlib.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="AI Integration" />
+        <h3>AI Integration</h3>
+        <p>Deploy AI models via APIs into production platforms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="loop-scroll">
+    <div class="loop-track cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2718/2718224.png" alt="Health Assistant" />
+        <h3>AI Health Assistant</h3>
+        <p>Chatbot using GPT and voice recognition for medical queries.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2971/2971022.png" alt="Crop Detector" />
+        <h3>Crop Disease Detector</h3>
+        <p>CNN to identify diseases in crop leaves via image recognition.</p>
+      </div>
+      <div class="card last-big-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3142/3142107.png" alt="Traffic Monitoring" />
+        <h3>Traffic Monitoring</h3>
+        <p>Graph-based AI to suggest alternate traffic routes in real time.</p>
+      </div>
+      <div class="card last-big-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2550/2550341.png" alt="Sign Translator" />
+        <h3>Sign Language Translator</h3>
+        <p>Speech-to-sign translator with animated 3D avatar using Whisper.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-form">
+    <form action="https://formsubmit.co/lokeshai2005@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section id="socialm" class="content">
+  <div class="socialm-icons">
+    <a href="mailto:lokeshai2005@gmail.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Mail">
+    </a>
+    <a href="https://github.com/lokeshwaranselvam" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/s-lokeshwaran-b-tech-artificial-intelligence-and-data-science-1545b3245/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Lokeshwaran. All rights reserved.</p>
+</footer>
+
+<script>
+  const aboutText = "I’m a data scientist with a deep passion for solving real-world problems using AI and machine learning. With hands-on experience in model deployment, data visualization, and natural language processing, I enjoy transforming data into solutions that matter.";
+  let index = 0;
+  const speed = 30;
+  function typeEffect() {
+    if (index < aboutText.length) {
+      document.getElementById("about-text").innerHTML += aboutText.charAt(index);
+      index++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+  window.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+</body>
+</html>
